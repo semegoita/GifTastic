@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
         crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+
+
     <link rel="stylesheet" href="assets/css/style.css ">
     <link rel="stylesheet" href="assets/css/reset.css">
     <title>GifTastic</title>
@@ -22,27 +22,28 @@
 <body>
     <div class="container">
         <div class="jumbotron">
-            <div id="empty"></div>
+            <div id="buttons-view"></div>
         </div>
         <div class="row">
             <div class="col-md-8">
                 <!-- display animal gifs here  -->
+                <div id="gif-view">
+                </div>
             </div>
             <div class="col-md-4">
                 <form>
-
                     <div class="form-group">
                         <label for="exampleInputPassword1">Add an Animal</label>
-                        <br>
                         <input type="text" class="form-control" id="animal" placeholder="Add an Animal's Name Here">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-lg-Active">Submit</button>
+                    <button type="submit" class="btn btn-primary btn-lg-Active" id="added">Submit</button>
                 </form>
             </div>
         </div>
-
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <script src="assets/app.js/app.js"></script>
 
