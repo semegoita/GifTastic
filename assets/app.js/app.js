@@ -21,22 +21,27 @@ function displayGif() {
       var p = $("<p>").text("Rating: " + results[i].rating);
       // Creating and storing an image tag
       var animalImage = $("<img>");
-      animalImage.addClass = ("anImg");
+      
       // Setting the src attribute of the image to a property pulled off the result item
-      var state = $(this).attr("data-state");
+      
       animalImage.attr('src', results[i].images.fixed_height.url);
       animalImage.attr('data-still', results[i].images.fixed_height_still.url);
-      animalImage.attr('data-animate', results[i].images.fixed_height.url).attr('data-state','still');;
+      animalImage.attr('data-animate',results[i].images.fixed_height.url);
+      
+      
       //.attr('data-state', 'still');;
       // Appending the paragraph and image tag to the animalDiv
       animalDiv.append(p);
+      
       animalDiv.append(animalImage);
-
+      animalImage.addClass("anImg");
       // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
       $("#gif-view").prepend(animalDiv);
-      $('#gif-view > div:nth-child(n) > img').on('click', function () {
+
+      $('.anImg').on('click', function () {
         //console.log('working');
-       
+       //#gif-view > div:nth-child(n) > img
+       var state = $(this).attr("data-state");
         if (state === "still") {
           $(this).attr("src", $(this).attr("data-animate"));
           $(this).attr("data-state", "animate");
